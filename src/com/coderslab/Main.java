@@ -44,7 +44,7 @@ public class Main extends Application {
         labelTitle.setAlignment(Pos.TOP_CENTER);
         labelTitle.setFont(Font.font("Verdana", FontWeight.BOLD, 20));
 
-        //Add picture
+        //Add pic
         Image image = new Image("File:PCpic.png");
         ImageView iv1 = new ImageView();
         iv1.setImage(image);
