@@ -1,0 +1,26 @@
+
+.buttons{
+    -fx-background-color: #297af2;
+    -fx-text-fill: white;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-weight: bold;
+    -fx-pref-height: 28px;
+    -fx-pref-width: 200px;
+}
+
+.labels{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.textfields{
+    -fx-background-color: #95bced;
+    -fx-font-weight: bold;
+    -fx-prompt-text-fill: red;
+}
+.combo-box .cell:selected {
+    -fx-font-weight: bold;
+    -fx-background-color: #95bced;
+    -fx-text-fill: black;
+}
