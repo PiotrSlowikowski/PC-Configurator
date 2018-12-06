@@ -9,6 +9,7 @@
 }
 
 .labels{
+    -fx-font: 15px Verdana;
     -fx-text-fill: black;
     -fx-font-weight: bold;
 }

@@ -55,113 +55,151 @@ public class Main extends Application {
         Label labelChoice = new Label("Choose hardware components from the box below");
         labelChoice.setMinSize(1000, 40);
         labelChoice.setAlignment(Pos.TOP_CENTER);
-        labelChoice.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+        labelChoice.getStyleClass().add("labels");
+
+        Label labelStatus = new Label("In stock (pieces)");
+        labelStatus.getStyleClass().add("labels");
+//        labelStatus.setAlignment(Pos.BASELINE_RIGHT);
+        labelStatus.setPadding(new Insets(0, 0, 0, 650));
+//        labelStatus.setMinSize(500, 50);
+
+        Label labelPrice = new Label("Price");
+        labelPrice.setPadding(new Insets(0,0,0,50));
+        labelPrice.getStyleClass().add("labels");
+
+        HBox hboxProperties = new HBox(40);
+        hboxProperties.getChildren().addAll(labelStatus, labelPrice);
 
         //Chosen components part label
         Label labelMOBO = new Label("Motherboard: ");
-        labelMOBO.setMinSize(100, 15);
-        labelMOBO.setAlignment(Pos.CENTER);
-        labelMOBO.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+        labelMOBO.setMinSize(0, 15);
+        labelMOBO.setPadding(new Insets(0,0,0,0));
+        labelMOBO.setAlignment(Pos.BASELINE_CENTER);
+        labelMOBO.getStyleClass().add("labels");
 
         Label labelCPU = new Label("Processor: ");
-        labelCPU.setMinSize(100, 30);
-        labelCPU.setAlignment(Pos.CENTER);
-        labelCPU.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+        labelCPU.setMinSize(0, 15);
+        labelCPU.setPadding(new Insets(0,0,0,0));
+        labelCPU.setAlignment(Pos.BASELINE_CENTER);
+        labelCPU.getStyleClass().add("labels");
 
         Label labelGPU = new Label("Graphics Card: ");
-        labelGPU.setMinSize(100, 30);
-        labelGPU.setAlignment(Pos.CENTER);
-        labelGPU.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+        labelGPU.setMinSize(100, 15);
+        labelGPU.setPadding(new Insets(0,0,0,-10));
+        labelGPU.setAlignment(Pos.BASELINE_CENTER);
+        labelGPU.getStyleClass().add("labels");
 
         Label labelRAM = new Label("RAM: ");
-        labelRAM.setMinSize(100, 30);
-        labelRAM.setAlignment(Pos.CENTER);
-        labelRAM.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+        labelRAM.setMinSize(100, 15);
+        labelRAM.setPadding(new Insets(0,0,0,-30));
+        labelRAM.setAlignment(Pos.BASELINE_CENTER);
+        labelRAM.getStyleClass().add("labels");
 
-        Label labelHardDrive = new Label("Solid State Drive: ");
-        labelHardDrive.setMinSize(100, 30);
-        labelHardDrive.setAlignment(Pos.CENTER);
-        labelHardDrive.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+        Label labelHardDrive = new Label("Hard Drive: ");
+        labelHardDrive.setMinSize(100, 15);
+        labelHardDrive.setPadding(new Insets(0,0,0,20));
+        labelHardDrive.setAlignment(Pos.BASELINE_RIGHT);
+        labelHardDrive.getStyleClass().add("labels");
 
         Label labelPSU = new Label("Power Supply: ");
-        labelPSU.setMinSize(100, 30);
-        labelPSU.setAlignment(Pos.CENTER);
-        labelPSU.setFont(Font.font("Verdana", FontWeight.BOLD, 15));
+        labelPSU.setMinSize(100, 15);
+        labelPSU.setAlignment(Pos.BASELINE_CENTER);
+        labelPSU.getStyleClass().add("labels");
 
 
         //Fill component labels
-        Label labelMOBOFill = new Label("");
-        labelMOBOFill.setMinSize(250, 30);
+        Label labelMOBOFill = new Label("Name");
+        labelMOBOFill.setMinSize(300, 30);
         labelMOBOFill.setPadding(new Insets(0, 0, 0, 20));
-        labelMOBOFill.setAlignment(Pos.CENTER);
-        labelMOBOFill.setFont((Font.font("Verdana", FontWeight.BOLD, 13)));
+        labelMOBOFill.setAlignment(Pos.TOP_CENTER);
+        labelMOBOFill.getStyleClass().add("labels");
 
-        Label labelCPUFill = new Label("");
-        labelCPUFill.setMinSize(250, 30);
-        labelCPUFill.setPadding(new Insets(0, 0, 0, 20));
-        labelCPUFill.setAlignment(Pos.CENTER);
-        labelCPUFill.setFont((Font.font("Verdana", FontWeight.BOLD, 13)));
+        Label labelCPUFill = new Label("Name");
+        labelCPUFill.setMinSize(300, 30);
+        labelCPUFill.setPadding(new Insets(0, 0, 0, 50));
+        labelCPUFill.setAlignment(Pos.TOP_CENTER);
+        labelCPUFill.getStyleClass().add("labels");
 
-        Label labelGPUFill = new Label("");
-        labelGPUFill.setMinSize(250, 30);
+        Label labelGPUFill = new Label("Name");
+        labelGPUFill.setMinSize(300, 30);
         labelGPUFill.setPadding(new Insets(0, 0, 0, 20));
         labelGPUFill.setAlignment(Pos.CENTER);
-        labelGPUFill.setFont((Font.font("Verdana", FontWeight.BOLD, 13)));
+        labelGPUFill.getStyleClass().add("labels");
 
-        Label labelRAMFill = new Label("");
-        labelRAMFill.setMinSize(250, 30);
-        labelRAMFill.setPadding(new Insets(0, 0, 0, 20));
+        Label labelRAMFill = new Label("Name");
+        labelRAMFill.setMinSize(300, 30);
+        labelRAMFill.setPadding(new Insets(0, 0, 0, 30));
         labelRAMFill.setAlignment(Pos.CENTER);
-        labelRAMFill.setFont((Font.font("Verdana", FontWeight.BOLD, 13)));
+        labelRAMFill.getStyleClass().add("labels");
 
-        Label labelHardDriveFill = new Label("");
-        labelHardDriveFill.setMinSize(250, 30);
-        labelHardDriveFill.setPadding(new Insets(0, 0, 0, 20));
+        Label labelHardDriveFill = new Label("Name");
+        labelHardDriveFill.setMinSize(300, 30);
+        labelHardDriveFill.setPadding(new Insets(0, 0, 0, 30));
         labelHardDriveFill.setAlignment(Pos.CENTER);
-        labelHardDriveFill.setFont((Font.font("Verdana", FontWeight.BOLD, 13)));
+        labelHardDriveFill.getStyleClass().add("labels");
 
-        Label labelPSUFill = new Label("");
-        labelPSUFill.setMinSize(250, 30);
-        labelPSUFill.setPadding(new Insets(0, 0, 0, 20));
+        Label labelPSUFill = new Label("Name");
+        labelPSUFill.setMinSize(300, 30);
+        labelPSUFill.setPadding(new Insets(0, 0, 0, 0));
         labelPSUFill.setAlignment(Pos.CENTER);
-        labelPSUFill.setFont((Font.font("Verdana", FontWeight.BOLD, 13)));
+        labelPSUFill.getStyleClass().add("labels");
 
         //Quantityy
-        Label labelMOBOQuantity = new Label("");
-        labelMOBOQuantity.setPadding(new Insets(0, 10, 0, 0));
-        labelMOBOQuantity.setMinSize(230, 30);
-        labelMOBOQuantity.setAlignment(Pos.BASELINE_RIGHT);
+        Label labelMOBOQuantity = new Label("5");
+        labelMOBOQuantity.setPadding(new Insets(0, 0, 0, -10));
+        labelMOBOQuantity.setMinSize(100, 30);
+//        labelMOBOQuantity.setAlignment(Pos.BASELINE_LEFT);
         labelMOBOQuantity.getStyleClass().add("labels");
 
-        Label labelCPUQuantity = new Label("");
-        labelCPUQuantity.setPadding(new Insets(0, -3, 0, 0));
-        labelCPUQuantity.setMinSize(230, 30);
-        labelCPUQuantity.setAlignment(Pos.BASELINE_RIGHT);
+        Label labelCPUQuantity = new Label("5");
+        labelCPUQuantity.setPadding(new Insets(0, 0, 0, 8));
+        labelCPUQuantity.setMinSize(100, 30);
         labelCPUQuantity.getStyleClass().add("labels");
 
-        Label labelGPUQuantity = new Label("");
-        labelGPUQuantity.setPadding(new Insets(0, 10, 0, 0));
-        labelGPUQuantity.setMinSize(230, 30);
-        labelGPUQuantity.setAlignment(Pos.BASELINE_RIGHT);
+        Label labelGPUQuantity = new Label("5");
+        labelGPUQuantity.setPadding(new Insets(0, 10, 0, -6));
+        labelGPUQuantity.setMinSize(100, 30);
         labelGPUQuantity.getStyleClass().add("labels");
 
-        Label labelRAMQuantity = new Label("");
-        labelRAMQuantity.setPadding(new Insets(0, -5, 0, 0));
-        labelRAMQuantity.setMinSize(230, 30);
-        labelRAMQuantity.setAlignment(Pos.BASELINE_RIGHT);
+        Label labelRAMQuantity = new Label("5");
+        labelRAMQuantity.setPadding(new Insets(0, -5, 0, -0));
+        labelRAMQuantity.setMinSize(100, 30);
         labelRAMQuantity.getStyleClass().add("labels");
 
-        Label labelHardDriveQuantity = new Label("");
-        labelHardDrive.setPadding(new Insets(0, -33, 0, 0));
-        labelHardDriveQuantity.setMinSize(230, 30);
-        labelHardDriveQuantity.setAlignment(Pos.BASELINE_RIGHT);
+        Label labelHardDriveQuantity = new Label("5");
+        labelHardDrive.setPadding(new Insets(0, 0, 0, 10));
+        labelHardDriveQuantity.setMinSize(100, 30);
         labelHardDriveQuantity.getStyleClass().add("labels");
 
-        Label labelPSUFillQuantity = new Label("");
-        labelPSUFillQuantity.setPadding(new Insets(0, 0, 0, 0));
-        labelPSUFillQuantity.setMinSize(230, 30);
-        labelPSUFillQuantity.setAlignment(Pos.BASELINE_RIGHT);
+        Label labelPSUFillQuantity = new Label("5");
+        labelPSUFillQuantity.setPadding(new Insets(0, 0, 0, -10));
+        labelPSUFillQuantity.setMinSize(100, 30);
         labelPSUFillQuantity.getStyleClass().add("labels");
+
+        //Price
+        Label labelMOBOPrice = new Label("100");
+        labelMOBOPrice.setPadding(new Insets(0, 10, 0, 0));
+        labelMOBOPrice.getStyleClass().add("labels");
+
+        Label labelCPUPrice = new Label("100");
+        labelCPUPrice.setPadding(new Insets(0, 0, 0, 20));
+        labelCPUPrice.getStyleClass().add("labels");
+
+        Label labelGPUPrice = new Label("100");
+        labelGPUPrice.setPadding(new Insets(0, 10, 0, 5));
+        labelGPUPrice.getStyleClass().add("labels");
+
+        Label labelRAMPrice = new Label("100");
+        labelRAMPrice.setPadding(new Insets(0, -5, 0, 10));
+        labelRAMPrice.getStyleClass().add("labels");
+
+        Label labelHardDrivePrice = new Label("100");
+        labelHardDrivePrice.setPadding(new Insets(0, 0, 0, 10));
+        labelHardDrivePrice.getStyleClass().add("labels");
+
+        Label labelPSUPrice = new Label("100");
+        labelPSUPrice.setPadding(new Insets(0, 0, 0, 0));
+        labelPSUPrice.getStyleClass().add("labels");
 
         labelWarning = new Label();
         labelWarning.setAlignment(Pos.CENTER);
@@ -231,15 +269,8 @@ public class Main extends Application {
 
         Label labelComponents = new Label("List of components you have chosen:");
         labelComponents.setPadding(new Insets(15, 10, 10, 10));
-        labelComponents.setFont((Font.font("Verdana", FontWeight.BOLD, 15)));
+        labelComponents.getStyleClass().add("labels");
         labelComponents.setAlignment(Pos.BOTTOM_CENTER);
-
-        Label labelStatus = new Label("In stock (pieces)");
-        labelStatus.setFont((Font.font("Verdana", FontWeight.BOLD, 15)));
-        labelStatus.setAlignment(Pos.BASELINE_RIGHT);
-        labelStatus.setPadding(new Insets(10, 90, 10, 10));
-        labelStatus.setMinSize(1000, 50);
-
 
         //Hbox with combobox and addbutton, clearbutton
         HBox hbox = new HBox(40);
@@ -250,27 +281,27 @@ public class Main extends Application {
         HBox hboxMOBOComponents = new HBox(100);
         hboxMOBOComponents.setAlignment(Pos.CENTER);
         hboxMOBOComponents.getStyleClass().add("labels");
-        hboxMOBOComponents.getChildren().addAll(labelMOBO, labelMOBOFill, labelMOBOQuantity);
+        hboxMOBOComponents.getChildren().addAll(labelMOBO, labelMOBOFill, labelMOBOQuantity, labelMOBOPrice);
 
         HBox hboxCPUComponents = new HBox(100);
         hboxCPUComponents.setAlignment(Pos.CENTER);
-        hboxCPUComponents.getChildren().addAll(labelCPU, labelCPUFill, labelCPUQuantity);
+        hboxCPUComponents.getChildren().addAll(labelCPU, labelCPUFill, labelCPUQuantity, labelCPUPrice);
 
         HBox hboxGPUComponents = new HBox(100);
         hboxGPUComponents.setAlignment(Pos.CENTER);
-        hboxGPUComponents.getChildren().addAll(labelGPU, labelGPUFill, labelGPUQuantity);
+        hboxGPUComponents.getChildren().addAll(labelGPU, labelGPUFill, labelGPUQuantity, labelGPUPrice);
 
         HBox hboxRAMComponents = new HBox(100);
         hboxRAMComponents.setAlignment(Pos.CENTER);
-        hboxRAMComponents.getChildren().addAll(labelRAM, labelRAMFill, labelRAMQuantity);
+        hboxRAMComponents.getChildren().addAll(labelRAM, labelRAMFill, labelRAMQuantity, labelRAMPrice);
 
         HBox hboxHardDriveComponents = new HBox(100);
         hboxHardDriveComponents.setAlignment(Pos.CENTER);
-        hboxHardDriveComponents.getChildren().addAll(labelHardDrive, labelHardDriveFill, labelHardDriveQuantity);
+        hboxHardDriveComponents.getChildren().addAll(labelHardDrive, labelHardDriveFill, labelHardDriveQuantity, labelHardDrivePrice);
 
         HBox hboxPSUComponents = new HBox(100);
         hboxPSUComponents.setAlignment(Pos.CENTER);
-        hboxPSUComponents.getChildren().addAll(labelPSU, labelPSUFill, labelPSUFillQuantity);
+        hboxPSUComponents.getChildren().addAll(labelPSU, labelPSUFill, labelPSUFillQuantity, labelPSUPrice);
 
 
         VBox vboxComponents = new VBox(30);
@@ -285,10 +316,10 @@ public class Main extends Application {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.TOP_CENTER);
         vbox.setStyle("-fx-background-color: #9dbdf2");
-        vbox.getChildren().addAll(labelTitle, iv1, labelChoice, hbox, labelWarning, labelNotification, labelComponents, labelStatus, vboxComponents, exitButton);
+        vbox.getChildren().addAll(labelTitle, iv1, labelChoice, hbox, labelWarning, labelNotification, labelComponents, hboxProperties, vboxComponents, exitButton);
 
 
-        Scene scene = new Scene(vbox, 1020, 900);
+        Scene scene = new Scene(vbox, 1000, 900);
         scene.getStylesheets().add("css/style.css");
 
         window.setResizable(true);
