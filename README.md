@@ -1,4 +1,4 @@
-# PC Configurator
+## PC Configurator
 
 You can configure your own PC with that software.
 
