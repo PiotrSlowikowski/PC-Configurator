@@ -108,96 +108,96 @@ public class Main extends Application {
 
 
         //Fill component labels
-        Label labelMOBOFill = new Label("Name");
+        Label labelMOBOFill = new Label("");
         labelMOBOFill.setMinSize(300, 30);
         labelMOBOFill.setPadding(new Insets(0, 0, 0, 20));
         labelMOBOFill.setAlignment(Pos.TOP_CENTER);
         labelMOBOFill.getStyleClass().add("labels");
 
-        Label labelCPUFill = new Label("Name");
+        Label labelCPUFill = new Label("");
         labelCPUFill.setMinSize(300, 30);
         labelCPUFill.setPadding(new Insets(0, 0, 0, 50));
         labelCPUFill.setAlignment(Pos.TOP_CENTER);
         labelCPUFill.getStyleClass().add("labels");
 
-        Label labelGPUFill = new Label("Name");
+        Label labelGPUFill = new Label("");
         labelGPUFill.setMinSize(300, 30);
         labelGPUFill.setPadding(new Insets(0, 0, 0, 20));
         labelGPUFill.setAlignment(Pos.CENTER);
         labelGPUFill.getStyleClass().add("labels");
 
-        Label labelRAMFill = new Label("Name");
+        Label labelRAMFill = new Label("");
         labelRAMFill.setMinSize(300, 30);
         labelRAMFill.setPadding(new Insets(0, 0, 0, 30));
         labelRAMFill.setAlignment(Pos.CENTER);
         labelRAMFill.getStyleClass().add("labels");
 
-        Label labelHardDriveFill = new Label("Name");
+        Label labelHardDriveFill = new Label("");
         labelHardDriveFill.setMinSize(300, 30);
         labelHardDriveFill.setPadding(new Insets(0, 0, 0, 30));
         labelHardDriveFill.setAlignment(Pos.CENTER);
         labelHardDriveFill.getStyleClass().add("labels");
 
-        Label labelPSUFill = new Label("Name");
+        Label labelPSUFill = new Label("");
         labelPSUFill.setMinSize(300, 30);
         labelPSUFill.setPadding(new Insets(0, 0, 0, 0));
         labelPSUFill.setAlignment(Pos.CENTER);
         labelPSUFill.getStyleClass().add("labels");
 
         //Quantityy
-        Label labelMOBOQuantity = new Label("5");
+        Label labelMOBOQuantity = new Label("");
         labelMOBOQuantity.setPadding(new Insets(0, 0, 0, -10));
         labelMOBOQuantity.setMinSize(100, 30);
 //        labelMOBOQuantity.setAlignment(Pos.BASELINE_LEFT);
         labelMOBOQuantity.getStyleClass().add("labels");
 
-        Label labelCPUQuantity = new Label("5");
+        Label labelCPUQuantity = new Label("");
         labelCPUQuantity.setPadding(new Insets(0, 0, 0, 8));
         labelCPUQuantity.setMinSize(100, 30);
         labelCPUQuantity.getStyleClass().add("labels");
 
-        Label labelGPUQuantity = new Label("5");
+        Label labelGPUQuantity = new Label("");
         labelGPUQuantity.setPadding(new Insets(0, 10, 0, -6));
         labelGPUQuantity.setMinSize(100, 30);
         labelGPUQuantity.getStyleClass().add("labels");
 
-        Label labelRAMQuantity = new Label("5");
+        Label labelRAMQuantity = new Label("");
         labelRAMQuantity.setPadding(new Insets(0, -5, 0, -0));
         labelRAMQuantity.setMinSize(100, 30);
         labelRAMQuantity.getStyleClass().add("labels");
 
-        Label labelHardDriveQuantity = new Label("5");
+        Label labelHardDriveQuantity = new Label("");
         labelHardDrive.setPadding(new Insets(0, 0, 0, 10));
         labelHardDriveQuantity.setMinSize(100, 30);
         labelHardDriveQuantity.getStyleClass().add("labels");
 
-        Label labelPSUFillQuantity = new Label("5");
+        Label labelPSUFillQuantity = new Label("");
         labelPSUFillQuantity.setPadding(new Insets(0, 0, 0, -10));
         labelPSUFillQuantity.setMinSize(100, 30);
         labelPSUFillQuantity.getStyleClass().add("labels");
 
         //Price
-        Label labelMOBOPrice = new Label("100");
+        Label labelMOBOPrice = new Label("");
         labelMOBOPrice.setPadding(new Insets(0, 10, 0, 0));
         labelMOBOPrice.getStyleClass().add("labels");
 
-        Label labelCPUPrice = new Label("100");
+        Label labelCPUPrice = new Label("");
         labelCPUPrice.setPadding(new Insets(0, 0, 0, 20));
         labelCPUPrice.getStyleClass().add("labels");
 
-        Label labelGPUPrice = new Label("100");
+        Label labelGPUPrice = new Label("");
         labelGPUPrice.setPadding(new Insets(0, 10, 0, 5));
         labelGPUPrice.getStyleClass().add("labels");
 
-        Label labelRAMPrice = new Label("100");
+        Label labelRAMPrice = new Label("");
         labelRAMPrice.setPadding(new Insets(0, -5, 0, 10));
         labelRAMPrice.getStyleClass().add("labels");
 
-        Label labelHardDrivePrice = new Label("100");
+        Label labelHardDrivePrice = new Label("");
         labelHardDrivePrice.setPadding(new Insets(0, 0, 0, 10));
         labelHardDrivePrice.getStyleClass().add("labels");
 
-        Label labelPSUPrice = new Label("100");
+        Label labelPSUPrice = new Label("");
         labelPSUPrice.setPadding(new Insets(0, 0, 0, 0));
         labelPSUPrice.getStyleClass().add("labels");
 
@@ -229,21 +229,27 @@ public class Main extends Application {
                     if (comboBox.getValue().contains("CPU")) {
                         labelCPUFill.setText(comboBox.getValue());
                         labelCPUQuantity.setText(rs1.getString("Quantity"));
+                        labelCPUPrice.setText(rs1.getString("Price"));
                     } else if (comboBox.getValue().contains("GPU")) {
                         labelGPUFill.setText(comboBox.getValue());
                         labelGPUQuantity.setText(rs1.getString("Quantity"));
+                        labelGPUPrice.setText(rs1.getString("Price"));
                     }  else if (comboBox.getValue().contains("Motherboard")) {
                         labelMOBOFill.setText(comboBox.getValue());
                         labelMOBOQuantity.setText(rs1.getString("Quantity"));
+                        labelMOBOPrice.setText(rs1.getString("Price"));
                     } else if (comboBox.getValue().contains("RAM")) {
                         labelRAMFill.setText(comboBox.getValue());
                         labelRAMQuantity.setText(rs1.getString("Quantity"));
+                        labelRAMPrice.setText(rs1.getString("Price"));
                     } else if (comboBox.getValue().contains("SSD")) {
                         labelHardDriveFill.setText(comboBox.getValue());
                         labelHardDriveQuantity.setText(rs1.getString("Quantity"));
+                        labelHardDrivePrice.setText(rs1.getString("Price"));
                     } else if (comboBox.getValue().contains("PSU")) {
                         labelPSUFill.setText(comboBox.getValue());
                         labelPSUFillQuantity.setText(rs1.getString("Quantity"));
+                        labelPSUPrice.setText(rs1.getString("Price"));
                     }
                 }
             } catch (Exception exc) {
