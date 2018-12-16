@@ -35,8 +35,7 @@ public class Main extends Application {
 
         Stage window = primaryStage;
         window.setTitle("PC Configurator");
-
-
+        
         //Title label
         Label labelTitle = new Label("PC Hardware Configurator");
         labelTitle.setMinSize(1000, 70);
